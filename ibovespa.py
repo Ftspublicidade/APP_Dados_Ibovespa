@@ -9,7 +9,7 @@ yf.pdr_override()
 
 ibov = web.get_data_yahoo("^BVSP")
 ibov = ibov.reset_index()
-ibov_2020 = ibov.loc[ibov["Date"].dt.year == 2020]
+ibov_2021 = ibov.loc[ibov["Date"].dt.year == 2021]
 
 def main():
     st.title("Análise dos  dados da Ibovespa - Fernanda Santos")
@@ -19,7 +19,7 @@ def main():
     st.text('Visualizando os Últimos registros do dataset...')
     slider = st.slider("Valores", 0,100)
     st.dataframe(ibov.tail(slider))
-    st.header('Gráfico do fechamento das ações em 2020')
+    st.header('Gráfico do fechamento das ações em 2021')
 
     trace1 = go.Scatter(
                 x=ibov.Date,
