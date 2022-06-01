@@ -83,11 +83,11 @@ def main():
 
     #st.dataframe(ibov_2020)
 
-    trace3 = go.Candlestick(x=ibov_2020['Date'],
-                open=ibov_2020['Open'],
-                high=ibov_2020['High'],
-                low=ibov_2020['Low'],
-                close=ibov_2020['Close'])
+    trace3 = go.Candlestick(x=ibov_2021['Date'],
+                open=ibov_2021['Open'],
+                high=ibov_2021['High'],
+                low=ibov_2021['Low'],
+                close=ibov_2021['Close'])
 
     data2 = [trace3]
     fig2 = go.Figure(data=data2)
