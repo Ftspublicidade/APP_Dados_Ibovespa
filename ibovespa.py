@@ -19,7 +19,7 @@ def main():
     st.text('Visualizando os Últimos registros do dataset...')
     slider = st.slider("Valores", 0,100)
     st.dataframe(ibov.tail(slider))
-    st.header('Gráfico do fechamento das ações em 2021')
+    st.header('Gráfico do fechamento das ações')
 
     trace1 = go.Scatter(
                 x=ibov.Date,
@@ -31,7 +31,7 @@ def main():
 
     data = [trace1]
     layout = go.Layout(dict(
-    title = "Ações Ibovespa 2020",
+    title = "Ações Ibovespa",
     title_x= 0.5,
     xaxis =dict(
         range = ['2020-01-01',date.today()])),
